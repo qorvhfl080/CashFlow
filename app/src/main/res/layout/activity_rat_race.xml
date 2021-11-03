@@ -35,12 +35,14 @@
                         android:text="직업"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:background="@color/black"/>
-                    <EditText
-                        android:id="@+id/professionEdt"
+                        android:background="@color/black"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
+                    <Spinner
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/black"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -54,7 +56,9 @@
                         android:text="꿈"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:background="@color/black"/>
+                        android:background="@color/black"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
                     <EditText
                         android:id="@+id/dreamEdt"
                         android:layout_width="wrap_content"
@@ -73,7 +77,9 @@
                         android:text="회계감사"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:background="@color/black"/>
+                        android:background="@color/black"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
                     <EditText
                         android:id="@+id/auditorEdt"
                         android:layout_width="wrap_content"
@@ -84,6 +90,7 @@
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cashFlowLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/cardview_shadow_start_color"
@@ -130,6 +137,7 @@
                     app:layout_constraintHorizontal_bias="0.3"/>
 
                 <TextView
+                    android:id="@+id/passiveIncomeTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="(부동산/특허권,인세등 사업체로부터\n나오는 현금흐름)"
@@ -140,17 +148,115 @@
                     app:layout_constraintEnd_toEndOf="@id/passiveIncomeEdt"
                     app:layout_constraintHorizontal_bias="0.3"/>
 
+                <EditText
+                    android:id="@+id/totalIncomeEdt"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="총수입"
+                    android:drawableStart="@drawable/outline_dollar_24"
+                    android:drawablePadding="-25dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/passiveIncomeTxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"/>
+
                 <ImageView
                     android:id="@+id/minusImg"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:src="@drawable/outline_remove_24"
-                    app:layout_constraintTop_toBottomOf=""
+                    app:layout_constraintTop_toBottomOf="@id/totalIncomeEdt"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.4"/>
 
+                <EditText
+                    android:id="@+id/totalExpensesEdt"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="총지출"
+                    android:drawableStart="@drawable/outline_dollar_24"
+                    android:drawablePadding="-25dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/minusImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"/>
+
+                <EditText
+                    android:id="@+id/cashFlowEdt"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:hint=""
+                    android:drawableStart="@drawable/outline_dollar_24"
+                    android:drawablePadding="-25dp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/totalExpensesEdt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:id="@+id/cashFlowTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly Cash Flow"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/cashFlowEdt"
+                    app:layout_constraintStart_toStartOf="@id/cashFlowEdt"
+                    app:layout_constraintEnd_toEndOf="@id/cashFlowEdt"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    android:layout_marginStart="15dp"/>
+
+                <TextView
+                    android:id="@+id/cashFlowSubTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(Pay Day를 통과할 때 받는 돈)"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    app:layout_constraintTop_toBottomOf="@id/cashFlowTxt"
+                    app:layout_constraintStart_toStartOf="@id/cashFlowTxt"
+                    app:layout_constraintEnd_toEndOf="@id/cashFlowTxt"
+                    app:layout_constraintHorizontal_bias="0.3"/>
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="만약 자산소득이\n총지출보다 크다면\n당신은 쥐경주를 탈출합니다!"
+                    android:textColor="@color/white"
+                    android:background="@color/black"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    android:layout_marginEnd="10dp"
+                    android:paddingStart="1dp"
+                    android:paddingEnd="1dp"/>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/incomeTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Income(수입)"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:drawableStart="@drawable/outline_dollar_24"
+                android:drawableTint="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/cashFlowLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

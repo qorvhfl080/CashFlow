@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_add_24.xml" value="0.1695" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_dangerous_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_dollar_24.xml" value="0.1695" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_home_24.xml" value="0.1695" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_money_off_csred_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_remove_24.xml" value="0.1695" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_report_problem_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/layout/activity_main.xml" value="0.3067708333333333" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/layout/activity_rat_race.xml" value="0.32135416666666666" />
       </map>
