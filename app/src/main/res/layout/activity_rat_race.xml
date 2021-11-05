@@ -27,14 +27,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp">
+                    android:orientation="horizontal">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="직업"
+                        android:text="Profession(직업)"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:background="@color/black"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"/>
@@ -48,14 +47,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp">
+                    android:orientation="horizontal">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="꿈"
+                        android:text="Dream(꿈)"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:background="@color/black"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"/>
@@ -69,14 +67,13 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp">
+                    android:orientation="horizontal">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="회계감사"
+                        android:text="Auditor(회계감사)"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:background="@color/black"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"/>
@@ -98,19 +95,32 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.05"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.7"/>
+
                 <EditText
                     android:id="@+id/salaryEdt"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:hint="월급"
+                    android:hint="Salary\n(월급)"
                     android:drawableStart="@drawable/outline_dollar_24"
                     android:drawablePadding="-25dp"
                     android:gravity="center"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.3"/>
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"/>
 
                 <ImageView
                     android:id="@+id/plusImg"
@@ -118,23 +128,21 @@
                     android:layout_height="40dp"
                     android:src="@drawable/outline_add_24"
                     app:layout_constraintTop_toBottomOf="@id/salaryEdt"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.4"/>
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight" />
 
                 <EditText
                     android:id="@+id/passiveIncomeEdt"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:hint="자산소득"
+                    android:hint="Passive Income\n(자산소득)"
                     android:drawableStart="@drawable/outline_dollar_24"
                     android:drawablePadding="-25dp"
                     android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@id/plusImg"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.3"/>
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"/>
 
                 <TextView
                     android:id="@+id/passiveIncomeTxt"
@@ -145,22 +153,21 @@
                     android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@id/passiveIncomeEdt"
                     app:layout_constraintStart_toStartOf="@id/passiveIncomeEdt"
-                    app:layout_constraintEnd_toEndOf="@id/passiveIncomeEdt"
-                    app:layout_constraintHorizontal_bias="0.3"/>
+                    app:layout_constraintEnd_toEndOf="@id/passiveIncomeEdt"/>
 
                 <EditText
                     android:id="@+id/totalIncomeEdt"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:editable="false"
                     android:inputType="number"
-                    android:hint="총수입"
+                    android:hint="Total Income\n(총수입)"
                     android:drawableStart="@drawable/outline_dollar_24"
                     android:drawablePadding="-25dp"
                     android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@id/passiveIncomeTxt"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.3"/>
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"/>
 
                 <ImageView
                     android:id="@+id/minusImg"
@@ -168,27 +175,25 @@
                     android:layout_height="40dp"
                     android:src="@drawable/outline_remove_24"
                     app:layout_constraintTop_toBottomOf="@id/totalIncomeEdt"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.4"/>
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"/>
 
                 <EditText
                     android:id="@+id/totalExpensesEdt"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:hint="총지출"
+                    android:hint="Total Expenses\n(총지출)"
                     android:drawableStart="@drawable/outline_dollar_24"
                     android:drawablePadding="-25dp"
                     android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@id/minusImg"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.3"/>
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"/>
 
                 <EditText
                     android:id="@+id/cashFlowEdt"
-                    android:layout_width="200dp"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:editable="false"
                     android:hint=""
@@ -196,9 +201,8 @@
                     android:drawablePadding="-25dp"
                     android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@id/totalExpensesEdt"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"
                     android:layout_marginTop="20dp"/>
 
                 <TextView
@@ -212,7 +216,6 @@
                     app:layout_constraintTop_toBottomOf="@id/cashFlowEdt"
                     app:layout_constraintStart_toStartOf="@id/cashFlowEdt"
                     app:layout_constraintEnd_toEndOf="@id/cashFlowEdt"
-                    app:layout_constraintHorizontal_bias="0.3"
                     android:layout_marginStart="15dp"/>
 
                 <TextView
@@ -227,7 +230,48 @@
                     app:layout_constraintEnd_toEndOf="@id/cashFlowTxt"
                     app:layout_constraintHorizontal_bias="0.3"/>
 
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"
+                    android:background="@color/black"
+                    app:layout_constraintStart_toEndOf="@id/passiveIncomeEdt"
+                    app:layout_constraintEnd_toEndOf="@id/line2"
+                    app:layout_constraintTop_toTopOf="@id/passiveIncomeEdt"
+                    app:layout_constraintBottom_toBottomOf="@id/passiveIncomeEdt"/>
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/line1"
+                    app:layout_constraintBottom_toTopOf="@id/winConditionTxt"
+                    app:layout_constraintStart_toStartOf="@id/winConditionTxt"
+                    app:layout_constraintEnd_toEndOf="@id/winConditionTxt"/>
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="5dp"
+                    android:layout_height="0dp"
+                    android:background="@color/black"
+                    app:layout_constraintTop_toBottomOf="@id/winConditionTxt"
+                    app:layout_constraintBottom_toBottomOf="@id/line4"
+                    app:layout_constraintStart_toStartOf="@id/winConditionTxt"
+                    app:layout_constraintEnd_toEndOf="@id/winConditionTxt"/>
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"
+                    android:background="@color/black"
+                    app:layout_constraintTop_toTopOf="@id/totalExpensesEdt"
+                    app:layout_constraintBottom_toBottomOf="@id/totalExpensesEdt"
+                    app:layout_constraintStart_toEndOf="@id/totalExpensesEdt"
+                    app:layout_constraintEnd_toEndOf="@id/line3"/>
+
                 <TextView
+                    android:id="@+id/winConditionTxt"
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:text="만약 자산소득이\n총지출보다 크다면\n당신은 쥐경주를 탈출합니다!"
@@ -239,7 +283,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintVertical_bias="0.5"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="5dp"
                     android:padding="5dp"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
