@@ -155,19 +155,21 @@
                     app:layout_constraintStart_toStartOf="@id/passiveIncomeEdt"
                     app:layout_constraintEnd_toEndOf="@id/passiveIncomeEdt"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/totalIncomeEdt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:editable="false"
                     android:inputType="number"
-                    android:hint="Total Income\n(총수입)"
+                    android:text="Total Income\n(총수입)"
+                    android:textSize="16sp"
                     android:drawableStart="@drawable/outline_dollar_24"
                     android:drawablePadding="-25dp"
                     android:gravity="center"
                     app:layout_constraintTop_toBottomOf="@id/passiveIncomeTxt"
                     app:layout_constraintStart_toStartOf="@id/guidelineLeft"
-                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"/>
+                    app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
 
                 <ImageView
                     android:id="@+id/minusImg"
@@ -191,12 +193,12 @@
                     app:layout_constraintStart_toStartOf="@id/guidelineLeft"
                     app:layout_constraintEnd_toEndOf="@id/guidelineRight"/>
 
-                <EditText
+                <TextView
                     android:id="@+id/cashFlowEdt"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:editable="false"
-                    android:hint=""
+                    android:text=""
+                    android:textSize="16sp"
                     android:drawableStart="@drawable/outline_dollar_24"
                     android:drawablePadding="-25dp"
                     android:gravity="center"
