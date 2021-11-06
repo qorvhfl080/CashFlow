@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/black_bold_box.xml" value="0.135" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/black_normal_box.xml" value="0.156" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/black_under_line.xml" value="0.1485" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_add_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_dangerous_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_dollar_24.xml" value="0.1695" />
