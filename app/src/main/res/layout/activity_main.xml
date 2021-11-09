@@ -8,12 +8,68 @@
     tools:context=".activity.MainActivity">
 
     <TextView
+        android:id="@+id/jobTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="직업 선택"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.2"
+        android:layout_marginStart="20dp"/>
+
+    <Spinner
+        android:id="@+id/jobSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/jobTxt"
+        app:layout_constraintStart_toStartOf="@id/jobTxt"/>
+
+    <TextView
+        android:id="@+id/dreamTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="꿈 선택"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/jobSpinner"
+        app:layout_constraintStart_toStartOf="@id/jobTxt"
+        android:layout_marginTop="30dp"/>
+
+    <Spinner
+        android:id="@+id/dreamSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/dreamTxt"
+        app:layout_constraintStart_toStartOf="@id/dreamTxt"/>
+
+    <EditText
+        android:id="@+id/auditorEdt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:hint="회계감사 입력"
+        android:inputType="text"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dreamSpinner"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="게임시작"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        android:padding="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
