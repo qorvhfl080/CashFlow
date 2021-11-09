@@ -32,6 +32,9 @@ class MainActivity : BaseActivity() {
     override fun setupEvents() {
         binding.startBtn.setOnClickListener {
             val myIntent = Intent(mContext, RatRaceActivity::class.java)
+            myIntent.putExtra("job", jobData[binding.jobSpinner.selectedItemId.toInt()])
+            myIntent.putExtra("dream", dreamData[binding.dreamSpinner.selectedItemId.toInt()])
+            myIntent.putExtra("auditor", binding.auditorEdt.text.toString())
             startActivity(myIntent)
             finish()
         }

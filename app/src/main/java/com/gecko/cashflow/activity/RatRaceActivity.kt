@@ -27,6 +27,10 @@ class RatRaceActivity : BaseActivity() {
     var totalExpenses = 0
     var cashFlow = 0
 
+    lateinit var job: String
+    lateinit var dream: String
+    lateinit var auditor: String
+
     val handlerUserInputOk = object : Handler(Looper.getMainLooper()) {
         override fun handleMessage(msg: Message) {
             binding.totalIncomeEdt.setText("testing...")
@@ -88,6 +92,11 @@ class RatRaceActivity : BaseActivity() {
     }
 
     override fun setValues() {
-
+        job = intent.getStringExtra("job").toString()
+        dream = intent.getStringExtra("dream").toString()
+        auditor = intent.getStringExtra("auditor").toString()
+        binding.jobTxt.text = job
+        binding.dreamTxt.text = dream
+        binding.auditorTxt.text = auditor
     }
 }
