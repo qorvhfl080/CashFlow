@@ -6,6 +6,7 @@
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/black_bold_box.xml" value="0.135" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/black_normal_box.xml" value="0.156" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/black_under_line.xml" value="0.1485" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/black_under_thin_line.xml" value="0.1125" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_add_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_dangerous_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_dollar_24.xml" value="0.1695" />
@@ -14,7 +15,7 @@
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_remove_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/drawable/outline_report_problem_24.xml" value="0.1695" />
         <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/layout/activity_main.xml" value="0.3067708333333333" />
-        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/layout/activity_rat_race.xml" value="0.32135416666666666" />
+        <entry key="..\:/Users/qorvh/AndroidStudioProjects_Mine/CashFlow/app/src/main/res/layout/activity_rat_race.xml" value="0.2977777777777778" />
       </map>
     </option>
   </component>

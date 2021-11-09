@@ -37,11 +37,11 @@
                         android:background="@color/black"
                         android:paddingStart="10dp"
                         android:paddingEnd="10dp"/>
-                    <Spinner
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:backgroundTint="@color/black"/>
+                        android:text=""/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -86,6 +86,27 @@
                         android:gravity="center"/>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash(현금)"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:background="@color/black"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
+                    <EditText
+                        android:id="@+id/cashEdt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"/>
+                </LinearLayout>
+
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -95,7 +116,8 @@
                 android:background="@drawable/black_bold_box"
                 app:layout_constraintTop_toBottomOf="@id/jobLayout"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="30dp">
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guidelineLeft"
@@ -389,12 +411,191 @@
             <LinearLayout
                 android:id="@+id/expensesLayout"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/cardview_shadow_start_color"
                 app:layout_constraintTop_toBottomOf="@id/expensesTxt"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Taxes(세금)"
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line"
+                        android:layout_marginEnd="20dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/black_under_thin_line"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Home Mortgage Payment(주택 대출 이자)"
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line"
+                        android:layout_marginEnd="20dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/black_under_thin_line"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="School Loans Payment(학자금 대출 이자)"
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line"
+                        android:layout_marginEnd="20dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/black_under_thin_line"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Car Loans Payment(자동차 할부 이자)"
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line"
+                        android:layout_marginEnd="20dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/black_under_thin_line"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Credit Card Payment(신용카드 할부 이자)"
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line"
+                        android:layout_marginEnd="20dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/black_under_thin_line"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Other Expenses(기타 소비)"
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line"
+                        android:layout_marginEnd="20dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/black_under_thin_line"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Bank Loan Payment(은행 대출금 이자)"
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line"
+                        android:layout_marginEnd="20dp"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/black_under_thin_line"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Child Expenses(자녀 양육비)"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="x(#of Child)"
+                        android:textColor="@color/black"/>
+                    <TextView
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:background="@drawable/black_under_thin_line"/>
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text=""
+                        android:background="@drawable/black_under_thin_line"
+                        android:gravity="center"/>
+                </LinearLayout>
+
             </LinearLayout>
 
             <TextView
