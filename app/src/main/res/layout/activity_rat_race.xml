@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:text="Profession(직업)"
                         android:textColor="@color/white"
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:text="Dream(꿈)"
                         android:textColor="@color/white"
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:text="Auditor(회계감사)"
                         android:textColor="@color/white"
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="160dp"
                         android:layout_height="wrap_content"
                         android:text="Cash(현금)"
                         android:textColor="@color/white"
