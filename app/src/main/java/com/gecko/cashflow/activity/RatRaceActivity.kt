@@ -26,6 +26,7 @@ class RatRaceActivity : BaseActivity() {
     var totalIncome = 0
     var totalExpenses = 0
     var cashFlow = 0
+    var cash = 0
 
     lateinit var job: String
     lateinit var dream: String
@@ -97,6 +98,11 @@ class RatRaceActivity : BaseActivity() {
         auditor = intent.getStringExtra("auditor").toString()
         binding.jobTxt.text = job
         binding.dreamTxt.text = dream
-        binding.auditorTxt.text = auditor
+        if (auditor == "") {
+            binding.auditorTxt.text = "미설정"
+        } else {
+            binding.auditorTxt.text = auditor
+        }
+        binding.cashTxt.text = cash.toString()
     }
 }
